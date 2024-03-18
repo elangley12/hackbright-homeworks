@@ -3,7 +3,7 @@
 // write melon dictionary as a js array
 'use strict';
 
-const melonsArray = [
+const allMelons = [
     'Ogen',
   'Horned Melon',
   'Watermelon',
@@ -54,3 +54,21 @@ const melonsArray = [
   'Santa Claus',
   'Casaba',
 ]
+
+// create a function to loop through allMelons and add them to an array of melon counts.
+
+function countMelons(melonArray) {
+    const melonCounts = {};
+
+    for (const melon of melonArray) {
+        if (melonCounts[melon]) {
+            melonCounts[melon] += 1;
+        } else {
+            melonCounts[melon] = 1;
+        }
+    }
+
+    return melonCounts;
+}
+
+console.log(countMelons(allMelons));
