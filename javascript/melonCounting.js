@@ -55,12 +55,12 @@ const allMelons = [
   'Casaba',
 ]
 
-// create a function to loop through allMelons and add them to an array of melon counts.
+// create a function to loop through allMelons and add them to a dict of melon counts.
 
 function countMelons(melonArray) {
     const melonCounts = {};
 
-    for (const melon of melonArray) {
+    for (let melon of melonArray) {
         if (melonCounts[melon]) {
             melonCounts[melon] += 1;
         } else {
@@ -72,3 +72,30 @@ function countMelons(melonArray) {
 }
 
 console.log(countMelons(allMelons));
+
+// some other methods for looping over allMelons in js for review:
+
+// using array.reduce() instead of a function:
+
+// const melonCounts = allMelons.reduce(melonCounts, melon) => {
+//     if (melonCounts[melon]) {
+//         melonCounts[melon] += 1;
+//     } else {
+//         melonCounts[melon] = 1;
+//     }
+
+//     return melonCounts;
+
+// }, {});
+
+// console.log(melonCounts);
+
+
+// using short-circuit evaluation:
+const melonCounts = melonsToAdd.reduce((mCounts, melon) => {
+    melonCounts[melon] = (melonCounts[melon] || 0) + 1;
+
+    return melonCounts;
+}, {});
+
+console.log(melonCounts);
