@@ -92,10 +92,10 @@ console.log(countMelons(allMelons));
 
 
 // using short-circuit evaluation:
-const melonCounts = melonsToAdd.reduce((mCounts, melon) => {
-    melonCounts[melon] = (melonCounts[melon] || 0) + 1;
+// const melonCounts = melonsToAdd.reduce((mCounts, melon) => {
+//     melonCounts[melon] = (melonCounts[melon] || 0) + 1;
 
-    return melonCounts;
-}, {});
+//     return melonCounts;
+// }, {});
 
-console.log(melonCounts);
+// console.log(melonCounts);
