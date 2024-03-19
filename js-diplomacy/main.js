@@ -9,3 +9,8 @@ function changeColor() {
         element.classList.add('red');
     }
 }
+
+// prevent default form behavior with a function
+function validateNumber() {
+    
+}
