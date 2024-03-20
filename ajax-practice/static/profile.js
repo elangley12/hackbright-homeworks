@@ -3,7 +3,8 @@ function submitProfile(evt) {
 
   const data = {
     name: document.querySelector('#name-field').value,
-    // fill in the rest
+    age: document.querySelector('#age-field').value,
+    occupation: document.querySelector('#occupation-field').value,
   };
 
   // make request to server to get the data
